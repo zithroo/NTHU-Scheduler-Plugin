@@ -13,7 +13,7 @@ We are going to implement a custom scheduler following the scheduling framework.
 
 The figure below illustrates how the custom scheduler manipulates the pods. At time 0, pod A is submitted, but it is unschedulable. That’s because pod A belongs to group A, and pods in group A can’t be scheduled until the pod number within the group is more than 3. At time 5, pod B can’t be scheduled either. At time 10, pod C is not filtered out by the custom scheduler and can be scheduled because the pod in group A is more than three(pod A, pod B, and pod C). Next, pod C is passed to the score function. If the custom scheduler is configured as “Most Mode”, the node with the most allocable memory, which is node A, will be selected. On the other hand, if the custom scheduler is configured as “Least Mode”, Node B will be selected. 
 
-![](docs/img/plugins.png)
+![](docs/plugins.png)
 
 Tag “TODO” is the place you need to implement, which includes PreFilter(), Score(), and NormalizeScore().
 
