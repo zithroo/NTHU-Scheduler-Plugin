@@ -1,0 +1,14 @@
+scheduler:
+  name: my-scheduler 
+  image: my-scheduler:local
+  imagePullPolicy: Never
+  replicaCount: 1
+  leaderElect: false
+
+plugins:
+  enabled: ["CustomScheduler"]
+
+pluginConfig:
+- name: CustomScheduler
+  args:
+    mode: Least
