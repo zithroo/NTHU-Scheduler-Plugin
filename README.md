@@ -20,7 +20,7 @@ Tag “TODO” is the place you need to implement, which includes PreFilter(), S
 ## Commands
 - work on your scheduler
     ```
-    docker build -t my-scheduler:build -f Docker-build .
+    docker build -t my-scheduler:build -f Dockerfile-build .
     docker run -it --rm -v $(pwd):/go/src/app my-scheduler:build
     make
     ```
