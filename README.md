@@ -31,7 +31,7 @@ Tag “TODO” is the place you need to implement, which includes PreFilter(), S
     ```
 - deploy the scheduler
     ```
-    make buildImage
+    make buildLocal
     make loadImage
     make deploy
     ```
